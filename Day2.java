@@ -55,7 +55,7 @@ public class Solution2 {
 			NthLast(Head, k);
 		}
 		
-		//resursion never felt soo very much in use.
+		//recursion never felt soo very much in use.
 		public void NthLast(Node head,int n){
 			if(head == null)
 				return ;
@@ -69,6 +69,4 @@ public class Solution2 {
 				
 			}
 		}
-		
-		
 	}
