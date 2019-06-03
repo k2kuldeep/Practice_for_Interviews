@@ -55,7 +55,7 @@ public class Solution2 {
 			NthLast(Head, k);
 		}
 		
-		//recursion never felt soo very much in use.
+		//recursive approach : from back to front
 		public void NthLast(Node head,int n){
 			if(head == null)
 				return ;
