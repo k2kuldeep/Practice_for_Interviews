@@ -5,7 +5,6 @@ Follow-Up question:     Do this in one pass, ie, in O(n).
 Follow-Up question 2:   Explain how the used data-structure is implemented/stored in C++/Java/python
 Follow-Up question 3:   Time Complexities of various operations of the used data structures.
 */
-
 import java.util.*;
 public class Solution {
 	
@@ -49,5 +48,4 @@ public class Solution {
 		System.out.println(count/2); 	// if (1,5) is solution then (5,1) is also in solution. so to remove that.
 		sc.close();
 	}
-
 }
