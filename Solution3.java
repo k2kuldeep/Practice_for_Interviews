@@ -6,7 +6,6 @@ Follow-Up Question 1: Use Constant Space ie, no extra array
 Follow-Up Question 2: Try doing it in O(log n)
 */
 import java.util.*;
-
 class Solution3
 {
 	public static void main (String[] args)
@@ -34,7 +33,6 @@ class Solution3
 			//System.out.println(sum);
 		}
 		System.out.println(sum);*/
-		
 		
 		//-----------------------------------------------------------------------------
 		
