@@ -1,6 +1,5 @@
 /*Problem Statement: Given an array of numbers and a number k, return whether whether any 2 numbers from the array add up to K
 For example, given [10, 3, 2, 7] and K=12, return yes since 10+2=12. If K would have been 11, return no.
-
 Follow-Up question:     Do this in one pass, ie, in O(n).
 Follow-Up question 2:   Explain how the used data-structure is implemented/stored in C++/Java/python
 Follow-Up question 3:   Time Complexities of various operations of the used data structures.
