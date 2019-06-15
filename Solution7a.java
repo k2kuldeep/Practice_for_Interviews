@@ -8,8 +8,6 @@ import java.util.Stack;
 public class Solution7a {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
 		Stack<Integer> stack = new Stack<>();
 		stack.push(2);
 		stack.push(20);
