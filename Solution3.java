@@ -1,7 +1,6 @@
 /*Problem Statement : Find the nth number of the series. Series is a defined as
 sum of unique powers of 5 starting from 1.
 5 , 25 , 30(5+25) , 125 , 130(125+5) , 150(125+25) , 155(125+25+5)...... 
-
 Follow-Up Question 1: Use Constant Space ie, no extra array
 Follow-Up Question 2: Try doing it in O(log n)
 */
