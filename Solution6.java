@@ -4,7 +4,6 @@ P.S. This follow up question is asked in many high tier companies.
 */
 import java.util.HashMap;
 public class Solution6 {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
