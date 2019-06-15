@@ -1,5 +1,5 @@
-/*Problem Statement: Given a string, return the longest consecutive character and its length. For example, in string "AABCDDEBBBEA", return "B 3" since B occurs max for 3 consecutive times
-
+/*Problem Statement: Given a string, return the longest consecutive character and its length. For example, in string "AABCDDEBBBEA", 
+return "B 3" since B occurs max for 3 consecutive times
 Follow-Up question:     Do this in one pass, ie, in O(n).
 Follow-Up question 2:   Do this without using additional space.
  */
