@@ -6,7 +6,6 @@ Follow-up question 2: Do this in a single iteration
 Dutch National Flag Problem
  */
 public class Solution8 {
-
 	static int arr[] = {0,1,1,0,1,2,1,2,0,0,0,1};
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
