@@ -1,5 +1,4 @@
 /*Problem Statement: Find Nth last element of a linked list. For  example, in list 1->2->5->4->null 3rd last element is 2
-
 Follow-Up Question   : Do the same in a single iteration.
 Follow-Up Question 2: Present Linked list as other data structures (stack, queue, tree, graph)
 */
