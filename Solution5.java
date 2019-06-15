@@ -2,7 +2,6 @@
   like 1,1,1,1,2,2,2,3,4,5,11,12,12,12,12,12,12,12,12,12,12...
 You don't know the length of this stream. Your task is to find an integer in this stream and print its 
 position(any one of the position). There can be unending number of duplicates.
-
 Follow-up Question 1: Better complexity than O(n)
 Follow-up Question 2: What will change in your code if negative numbers are present.
 Follow-up Question 3: Return the number of duplicates of the given number. Ex- in above stream, if number is 2, you have to return 3.
