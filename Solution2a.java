@@ -1,8 +1,5 @@
-/*Problem Statement : A linked list : 1->2->3->4->5->6 is given. Print in order
- 	1 6
- 	2 5
- 	3 4
- */
+//Problem Statement : A linked list : 1->2->3->4->5->6->7 is given.
+ //	rearrange the list : 1->7->2->6->3->5->4
 
 public class Solution2a {
 
@@ -18,14 +15,15 @@ public class Solution2a {
 		list.insert(60);
 		list.insert(70);
 		
-		list.print();
+		list.print(list.head);
 		list.rearrange();
-
+		list.print(list.head);
 	}
 
 }
 class LinkedList1{
 	
+	//creating list
 	Node head;
 	class Node{
 		int data;
@@ -52,13 +50,14 @@ class LinkedList1{
 	}
 	
 	//print the list
-	public void print() {
-		Node temp = head;
+	public void print(Node node) {
+		Node temp = node;
 		while(temp != null)
 		{
 			System.out.println(temp.data);
 			temp = temp.next;
 		}
+		System.out.println();
 	}
 	
 	//rearrange the list
@@ -83,12 +82,26 @@ class LinkedList1{
 		node2 = reverserec(node2);
 		
 		//merging alternate nodes
-		
-		
-		
+		Node curr = new Node(0);
+		while(node1 != null || node2 != null){
+			if(node1!=null){
+				curr.next = node1;
+				node1 = node1.next;
+				curr = curr.next;
+				curr.next = null;
+			}
+			//print(curr);
+			if(node2!=null){
+				curr.next = node2;
+				node2 = node2.next;
+				curr = curr.next;
+				curr.next = null;
+			}
+			//print(curr);
+		}
 	}
 
-	// iterative reverse of linked list
+	//iterative reverse of linked list
 	private Node reverseiter(Node node2) {
 		// TODO Auto-generated method stub
 		Node prev = null;
