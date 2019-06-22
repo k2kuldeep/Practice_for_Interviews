@@ -13,10 +13,15 @@ public class Solution2b {
 		list.insert(30);
 		list.insert(40);
 		list.insert(50);
+		list.insert(60);
 		
-		list.display();
+		
+		list.display(list.head);
+		//System.out.println(list.head.next.next.next.next.data);
 		//create loop
-		list.head.next.next.next.next.next = list.head.next;
+		list.head.next.next.next.next.next.next = list.head.next.next;
+		
+		//System.out.println(list.head.next.next.next.next.next.data);
 		
 		//detect loop
 		/*if(list.detect_loop_using_HashSet(list.head))
@@ -24,14 +29,14 @@ public class Solution2b {
 		else
 			System.out.println("no loop present");*/
 		
-		if(list.detect_loop(list.head))
-			System.out.println("loop present");
-		else
-			System.out.println("no sloop present");
+		list.detect_loop(list.head);
+		list.display(list.head);
+		list.detect_loop(list.head);
 	}
 
 }
 class DemoLinkedList{
+	//creating node
 	Node head;
 	class Node{
 		int data;
@@ -42,6 +47,7 @@ class DemoLinkedList{
 		}
 	}
 	
+	//inserting nodes
 	public void insert(int d){
 		Node node = new Node(d);
 		if(head== null){
@@ -56,20 +62,36 @@ class DemoLinkedList{
 		}
 	}
 	
-	public boolean detect_loop(Node head2) {
+	public void detect_loop(Node node) {
+		int count = 0;
 		//tortoise and rabbit method
-		Node slow=head2;
-		Node fast = slow.next;
+		Node slow=node;
+		Node fast = node;
 		
 		while(fast!= null && fast.next!=null){
 			slow = slow.next;
 			fast = fast.next.next;
 			
-			if(slow == fast)
-				return true;
+			if(slow == fast){
+				count = 1;
+				System.out.println("loop present");
+				removeloop(slow);
+				break;
+			}		
 		}
+		if(count == 0)
+			System.out.println("no loop present");
 		
-		return false;
+	}
+
+	private void removeloop(Node node) {
+		//move equal distance from head and the node at which slow=fast.
+		Node temp = head;
+		while(temp.next != node.next){
+			temp = temp.next;
+			node = node.next;
+		}
+		node.next = null;
 	}
 
 	public boolean detect_loop_using_HashSet(Node node) {
@@ -86,9 +108,9 @@ class DemoLinkedList{
 		return false;
 	}
 
-	public void display(){
+	public void display(Node node){
 		System.out.println("Current list");
-		Node temp = head;
+		Node temp = node;
 		while(temp != null){
 			System.out.print(temp.data+"\t");
 			temp = temp.next;
