@@ -53,7 +53,7 @@ class DemoStack1
 				top1 = 0;
 				arr1[top1] = i;
 			}
-			else if(i < arr1[top1]){
+			else if(i <= arr1[top1]){		// <=
 				arr1[top1+1] = i;
 				top1+=1;
 			}
