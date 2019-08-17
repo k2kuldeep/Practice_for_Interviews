@@ -10,7 +10,6 @@ public class DailyCodingProblem4_1 {
 		int arr[] = {1, 2, 3, 1, 3, 6, 6}; 
         int n = arr.length; 
         
-        
         for(int i=0;i<n;i++){
         	
         	if(arr[Math.abs(arr[i])] >= 0)
