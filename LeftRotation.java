@@ -49,7 +49,7 @@ public class LeftRotation {
 		
 	}
 	
-	static int gcd(int a,int b)
+	static int gcd(int a,int b)//gcd = hcf
 	{
 		if(a==0)
 			return b;
@@ -61,9 +61,9 @@ public class LeftRotation {
 			return gcd(a,b%a);
 	}
 	
-	/*static int lcm(int a,int b)
+	/*static int common=1;
+	static int lcm(int a,int b)
 	{
-		int common=1;
 		if(common%a==0 && common%b==0)
 			return common;
 		common++;
