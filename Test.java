@@ -50,7 +50,8 @@ public class Test {
 		//remove extra spaces
 		String s= " jack    is  from      America.";
 		
-		System.out.println(s.trim().replaceAll("( )+", " ").replace("."," "));
+		System.out.println(s.trim().replaceAll("( )+", " ")	//removes extra space
+		.replace("."," "));					// removes '.'
 		
 	}
 
