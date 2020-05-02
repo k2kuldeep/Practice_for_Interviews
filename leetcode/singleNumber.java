@@ -23,8 +23,9 @@ public class singleNumber {
     }
 
 }
-NOTE:
+
+/*NOTE:
 1. method1 : put in hasmap and then count. 
 2. method2 :sort and check if consecutive numbers are same.
 3. XOR of a number with itself is 0.
-4. XOR of a number with 0 is number itself.
+4. XOR of a number with 0 is number itself.*/
