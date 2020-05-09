@@ -25,7 +25,6 @@ public class MoveZeros {
         System.out.println(Arrays.toString(nums));
     }
 }
-
 // Note: reversal algo to reverse and array - first to last and last to first. first++ and last--.
 // print an 1-D array - Arrays.toString(array)
 // Multidimensional array = Arrays.deepToString(array)
