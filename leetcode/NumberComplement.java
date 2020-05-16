@@ -44,7 +44,8 @@ public class NumberComplement {
     }
 }
 
-/*Note: <<(left shift) - msb is lost and insert zeros from right
+/*Note: Numbers are stored in decimal at every step
+ <<(left shift) - msb is lost and insert zeros from right
     Eg. 8(1000) << 1 = 16(10000)
  >>(right shift) - removes least significant bit
  eg. 8(1000) >> 1 = 4(100)
