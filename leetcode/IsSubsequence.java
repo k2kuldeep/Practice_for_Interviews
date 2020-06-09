@@ -31,7 +31,7 @@ public class IsSubsequence {
 
     private static boolean isSubsequence(String s, String t) {
 
-        if (s.length() == 0)
+        if (s.length() == 0)    // empty string is by default a substring
             return true;
         if (t.length() == 0)
             return false;
@@ -39,7 +39,8 @@ public class IsSubsequence {
         /*
         // 1st method- 
         int j =0;
-        for (int i=0;i<t.length() && j<s.length();i++)
+        for (int i=0;i<t.length() && j<s.length();i++) //if all s characters are found then
+                                        // no need to check.so second check condition
             if (s.charAt(j) == t.charAt(i))
                 j++;
         return j==s.length();
@@ -57,5 +58,5 @@ public class IsSubsequence {
 }
 
 
-/*Note - Subsequence means string exist not necessarily continuous but in the same sequence
-    Substring means string exist in continuous*/
+/*Note - Subsequence means string exist not necessarily continuous manner but in the same sequence.
+    Substring means string exist in continuous manner*/
