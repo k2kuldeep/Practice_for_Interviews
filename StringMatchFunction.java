@@ -12,7 +12,7 @@ public class StringMatchFunction {
 		//Base Change Program. All data type have base 10only. converting to base 16.
 		int x = 145;
 		
-		BigInteger br = new BigInteger(x+"",10);//10 is the initial base
+		BigInteger br = new BigInteger(x+"",10);//10 is the initial and default base
 		String s = br.toString(16);//16 is the base into which converted
 		
 		System.out.println(s);
