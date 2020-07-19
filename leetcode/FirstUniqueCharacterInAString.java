@@ -36,3 +36,8 @@ public class FirstUniqueCharacterInAString {
         return (min == Integer.MAX_VALUE)? -1: min;
     }
 }
+
+/*Note - First approach was to use hashmap<character, index>, but failed with "cc".
+got 1 but actual should be -1 as not unique.
+* then array of 26 length, but failed as it return character which is in start of alphabets order,
+not that with start of string given.*/
