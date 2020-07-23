@@ -30,7 +30,7 @@ public class removeNthLastNode {
         ListNode first = dummy;
         ListNode sec = dummy;
 
-        for (int i=0;i<=n;i++){
+        for (int i=0;i<n+1;i++){
             first = first.next;
         }
 
@@ -55,4 +55,5 @@ class ListNode{
 
 /*Note - why return dummy.next and not head.
 * you have list (1,2) and you have given , 2 to remove.
-* so u have to remove "1". so head will point at "1" but dummy.next will point 2.*/
+* so u have to remove "1". so head will point at "1" but dummy.next will point 2.
+* Note - Remember to run the first pointer to (n+1) times. */
