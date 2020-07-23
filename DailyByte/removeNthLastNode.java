@@ -30,7 +30,7 @@ public class removeNthLastNode {
         ListNode first = dummy;
         ListNode sec = dummy;
 
-        for (int i=1;i<=n+1;i++){
+        for (int i=0;i<=n;i++){
             first = first.next;
         }
 
