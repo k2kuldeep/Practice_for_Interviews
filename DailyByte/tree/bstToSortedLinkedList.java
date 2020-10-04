@@ -39,13 +39,15 @@ return...
 */
 public class bstToSortedLinkedList {
     public static void main(String[] args) {
-        demoNode1 root = new demoNode1(5);
-        root.left = new demoNode1(2);
-        root.right = new demoNode1(9);
-        root.left.left = new demoNode1(1);
-        root.left.right = new demoNode1(3);
+        demoNode root = new demoNode(5);
+        root.left = new demoNode(3);
+        root.right = new demoNode(7);
+        root.left.left = new demoNode(2);
+        root.left.right = new demoNode(4);
+        root.right.left = new demoNode(6);
+        root.right.right = new demoNode(8);
 
-        demoNode1 res = bstTolinklist(root);
+        demoNode res = bstTolinklist(root);
 
         while(res!=null) {
             System.out.print(res.val + " ");
@@ -54,38 +56,43 @@ public class bstToSortedLinkedList {
 
     }
 
-    private static demoNode1 bstTolinklist(demoNode1 root) {
-        if (root==null)
+    static demoNode dummy = new demoNode(-1);
+    static demoNode prev = dummy;
+    private static demoNode bstTolinklist(demoNode root)
+    {
+        if (root == null)
             return null;
 
-        while(root.left!=null){
-            demoNode1 rightmost = rightmostOfLeftSubtree(root.left);
-            demoNode1 newroot = root.left;
-            root.left = null;
-            rightmost.right = root;
+        inorder(root);
+        prev.left = null;
+        prev.right = null;
 
-            root = newroot;
-        }
-        return root;
+        return dummy.right;
     }
 
-    private static demoNode1 rightmostOfLeftSubtree(demoNode1 root) {
-        while(root.right!=null)
-            root = root.right;
+    private static void inorder(demoNode curr) {
+        if (curr==null)
+            return;
 
-        return root;
+        inorder(curr.left);
+        prev.left = null;
+        prev.right = curr;
+
+        prev = curr;
+        inorder(curr.right);
     }
-
-
 }
-class demoNode1{
+
+class demoNode{
     int val;
-    demoNode1 left, right;
-    demoNode1(int v){
+    demoNode left, right;
+    demoNode(int v){
         val=v;
         left=right=null;
     }
 }
 
 /*Note - Inorder traversal will get the tree elements in sorted order.
+        making dummy node static was only way. if it was in recursion, then dummy node returned to its 
+        previous value of -1 when stack returned.
 */
