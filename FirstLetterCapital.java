@@ -6,24 +6,17 @@ public class FirstLetterCapital {
 		// TODO Auto-generated method stub
 		String str = "dbkdsj KLKLhg hGYF lojffj";
 		
-		//str = str.toLowerCase();
 		System.out.println(str);
 		
-		StringBuilder s = new StringBuilder();		//mutable. growable and writable character sequence.
-		
-		char c = ' ';								// to contain every character of string
-		for(int i=0;i<str.length();i++){
-			
-			if(c==' ' && str.charAt(i) != ' ')
-				s.append(Character.toUpperCase(str.charAt(i)));
-			else
-				s.append(str.charAt(i));
-			
-			c = str.charAt(i);
-		}
+		String arr[] = str.split(" ");		// will break the sentene and place each word in one position
+
+        	StringBuilder sb = new StringBuilder();			//mutable. growable and writable character sequence.
+        	for (String x:arr){
+           	sb.append(Character.toUpperCase(x.charAt(0))+x.substring(1)+" ");
+        	}
 		
 		
-		System.out.println(s);
+		System.out.println(sb);
 		
 	}
 
